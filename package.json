@@ -1,0 +1,11 @@
+{
+  "name": "webrtc_demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "loclv <masamonedante@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.3",
+    "express": "^4.17.1"
+  }
+}
