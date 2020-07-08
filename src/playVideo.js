@@ -1,7 +1,7 @@
-function playVideo(stream) {
-    const video = document.getElementById('localStream');
+function playVideo(stream, viewStreamId) {
+    const video = document.getElementById(viewStreamId);
     video.srcObject = stream;
     video.onloadedmetadata = () => {video.play()};
 }
 
-
+module.exports = playVideo;
