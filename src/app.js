@@ -10,7 +10,11 @@ p.on('signal', token => {
     $('#mySignalTxt').val(JSON.stringify(token));
 });
 
-p.on('connect', () => {console.log('connected!')});
+p.on('connect', () => {
+    setInterval(() => p.send(Math.random()), 1000);
+});
+
+p.on('data', data => {console.log(`received data: ${data}`);});
 
 $('#connectBtn').click(() => {
     const friendSignal = JSON.parse(
