@@ -5,7 +5,7 @@ webrtc demo
 ## Compile frontend
 
 ```sh
-npx webpack ./src/app.js --mode development
+npx webpack --mode development
 ```
 
 ## Run server
