@@ -1,5 +1,5 @@
-const openCamera = require('./openCamera');
+const openSteam = require('./openSteam');
 
-openCamera();
+openSteam();
 
 console.log('test');
