@@ -5,11 +5,11 @@ webrtc demo
 ## Compile frontend
 
 ```sh
-npx webpack --mode development
+yarn run watch
 ```
 
 ## Run server
 
 ```sh
-node index.js
+yarn run start
 ```

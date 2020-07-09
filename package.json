@@ -2,6 +2,11 @@
   "name": "webrtc_demo",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "build": "npx webpack --mode development",
+    "watch": "npx webpack -w --mode development"
+  },
   "author": "",
   "license": "MIT",
   "dependencies": {
