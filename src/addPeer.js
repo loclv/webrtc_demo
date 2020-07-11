@@ -1,9 +1,10 @@
 const playVideo = require('./playVideo');
+const openStream = require('./openStream');
 const Peer = require('simple-peer');
 const $ = require('jquery');
 
-function openSteam() {
-    navigator.mediaDevices.getUserMedia({ audio: true, video: true})
+function addPeer() {
+    openStream()
     .then(stream => {
         playVideo(stream, 'localStream');
         const p = new Peer({
@@ -34,4 +35,4 @@ function openSteam() {
     .catch(error => console.log(error));
 }
 
-module.exports = openSteam;
+module.exports = addPeer;

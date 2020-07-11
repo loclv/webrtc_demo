@@ -1,5 +1,3 @@
-const openSteam = require('./openSteam');
+const addPeer = require('./addPeer');
 
-openSteam();
-
-console.log('test');
+addPeer();
