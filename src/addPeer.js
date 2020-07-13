@@ -7,21 +7,21 @@ function addPeer() {
     openStream()
     .then(stream => {
         playVideo(stream, 'localStream');
-        const p = new Peer({
+        const peer = new Peer({
             initiator: location.hash === '#1',
             trickle  : false,
             stream
         });
 
-        p.on('signal', token => {
+        peer.on('signal', token => {
             $('#mySignalTxt').val(JSON.stringify(token));
         });
 
-        // p.on('connect', () => {
-        //     setInterval(() => p.send(Math.random()), 1000);
+        // peer.on('connect', () => {
+        //     setInterval(() => peer.send(Math.random()), 1000);
         // });
 
-        p.on('stream', friendStream => {
+        peer.on('stream', friendStream => {
             playVideo(friendStream, 'friendStream');
         });
 
@@ -29,7 +29,7 @@ function addPeer() {
             const friendSignal = JSON.parse(
                 $('#friendSignal').val()
             );
-            p.signal(friendSignal);
+            peer.signal(friendSignal);
         });
     })
     .catch(error => console.log(error));
