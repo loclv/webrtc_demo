@@ -4,4 +4,4 @@ function openStream() {
     return navigator.mediaDevices.getUserMedia(config);
 }
 
-module.exports = openStream;
+export default openStream;
