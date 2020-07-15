@@ -1,3 +1,3 @@
-const addPeer = require('./addPeer');
+import addPeer from './addPeer';
 
 addPeer();

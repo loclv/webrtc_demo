@@ -1,7 +1,7 @@
-const playVideo = require('./playVideo');
-const openStream = require('./openStream');
-const Peer = require('simple-peer');
-const $ = require('jquery');
+import playVideo from './playVideo';
+import openStream from './openStream';
+import Peer from 'simple-peer';
+import $ from 'jquery';
 
 function addPeer() {
     openStream()
@@ -35,4 +35,4 @@ function addPeer() {
     .catch(error => console.log(error));
 }
 
-module.exports = addPeer;
+export default addPeer;

@@ -4,4 +4,4 @@ function playVideo(stream, viewStreamId) {
     video.onloadedmetadata = () => {video.play()};
 }
 
-module.exports = playVideo;
+export default playVideo;
